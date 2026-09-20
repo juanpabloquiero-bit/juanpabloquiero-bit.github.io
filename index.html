@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Juan Pablo Quiero Zárate | Académico e investigador</title>
+  <meta name="description" content="Sitio académico de Juan Pablo Quiero Zárate. Investigación en liderazgo político, economía y sostenibilidad, innovación, organizaciones, ética y sociedad.">
+  <meta name="author" content="Juan Pablo Quiero Zárate">
+  <meta name="theme-color" content="#f4f1ea">
+  <meta property="og:title" content="Dr. Juan Pablo Quiero Zárate">
+  <meta property="og:description" content="Académico e investigador. Liderazgo político, economía y sostenibilidad, innovación, organizaciones, ética y sociedad.">
+  <meta property="og:type" content="website">
+  <style>
+:root{
+  --paper:#f4f1ea;
+  --paper-2:#ece7dc;
+  --ink:#1d211f;
+  --muted:#656a66;
+  --line:#cfc9bc;
+  --deep:#202622;
+  --deep-2:#2c332f;
+  --accent:#716650;
+  --white:#fbfaf6;
+  --max:1180px;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font:inherit}
+.container{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+.skip-link{
+  position:absolute;left:-9999px;top:10px;background:var(--ink);color:white;padding:10px 14px;z-index:999
+}
+.skip-link:focus{left:10px}
+
+.site-header{
+  position:sticky;top:0;z-index:30;
+  background:color-mix(in srgb,var(--paper) 92%, transparent);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(29,33,31,.12);
+}
+.nav-wrap{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.brand-mark{
+  width:39px;height:39px;border:1px solid var(--ink);display:grid;place-items:center;
+  font-family:var(--serif);font-size:13px;letter-spacing:.06em
+}
+.brand-name{font-size:14px;letter-spacing:.015em;white-space:nowrap}
+.main-nav{display:flex;gap:24px;align-items:center}
+.main-nav a{font-size:13px;color:#3d423f;position:relative}
+.main-nav a::after{
+  content:"";position:absolute;left:0;bottom:-8px;width:100%;height:1px;background:var(--ink);
+  transform:scaleX(0);transform-origin:left;transition:transform .2s ease
+}
+.main-nav a:hover::after,.main-nav a:focus-visible::after{transform:scaleX(1)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);padding:7px 11px}
+
+.hero{padding:92px 0 78px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:72px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:700;color:var(--accent);margin:0 0 22px}
+h1,h2,h3,p{margin-top:0}
+h1{
+  font-family:var(--serif);font-weight:400;letter-spacing:-.035em;
+  font-size:clamp(54px,7vw,92px);line-height:.96;margin-bottom:32px
+}
+.hero-line{font-family:var(--serif);font-size:20px;line-height:1.5;max-width:760px;color:#3f4541;margin-bottom:27px}
+.hero-intro{max-width:760px;font-size:16px;color:var(--muted);margin-bottom:34px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.button{
+  display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;
+  border:1px solid var(--ink);font-size:13px;transition:.2s ease
+}
+.button.primary{background:var(--ink);color:var(--paper)}
+.button.primary:hover{background:#353b37}
+.button.secondary:hover{background:var(--paper-2)}
+
+.hero-visual{min-height:470px;border-left:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;padding-left:54px}
+.monogram{
+  width:min(100%,330px);aspect-ratio:1;border:1px solid var(--line);border-radius:50%;
+  display:grid;place-items:center;position:relative
+}
+.monogram::before,.monogram::after{
+  content:"";position:absolute;background:var(--line)
+}
+.monogram::before{width:120%;height:1px;left:-10%;top:50%}
+.monogram::after{width:1px;height:120%;left:50%;top:-10%}
+.monogram span{
+  background:var(--paper);padding:15px 18px;z-index:1;font-family:var(--serif);
+  font-size:46px;letter-spacing:.08em
+}
+.concept-axis{display:flex;align-items:center;gap:9px;margin-top:35px;font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
+.concept-axis i{height:1px;flex:1;background:var(--line)}
+
+.statement{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.statement-inner{padding:58px 0}
+.statement p{
+  margin:0;max-width:980px;font-family:var(--serif);font-size:clamp(28px,4vw,48px);
+  line-height:1.25;letter-spacing:-.02em
+}
+
+.section{padding:110px 0}
+.section-heading{max-width:720px;margin-bottom:55px}
+.section-heading h2{
+  font-family:var(--serif);font-size:clamp(38px,5vw,60px);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin-bottom:20px
+}
+.section-heading>p:last-child{color:var(--muted);max-width:620px}
+.research-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.research-card{min-height:280px;padding:34px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+.research-card h3{font-family:var(--serif);font-size:29px;font-weight:400;margin:38px 0 14px}
+.research-card p{color:var(--muted);max-width:480px}
+.card-number{font-size:11px;letter-spacing:.12em;color:var(--accent)}
+
+.section-dark{background:var(--deep);color:var(--white)}
+.section-heading.light .eyebrow{color:#b9ad95}
+.section-heading.light h2{color:var(--white)}
+.publication-list{border-top:1px solid #4c534e}
+.publication{
+  display:grid;grid-template-columns:190px 1fr 32px;gap:32px;
+  padding:33px 0;border-bottom:1px solid #4c534e;align-items:start
+}
+.publication-type{text-transform:uppercase;letter-spacing:.11em;font-size:10px;color:#b9ad95;padding-top:8px}
+.publication h3{font-family:var(--serif);font-size:34px;font-weight:400;margin-bottom:2px}
+.publication .subtitle{font-family:var(--serif);font-style:italic;color:#d8d2c6;margin-bottom:12px}
+.publication div>p:last-child{color:#aeb5b0;max-width:700px;margin-bottom:0}
+.arrow{font-size:22px;color:#b9ad95}
+
+.profile-grid{display:grid;grid-template-columns:.65fr 1.35fr;gap:80px;align-items:start}
+.sticky-heading{position:sticky;top:120px}
+.profile-content{max-width:730px}
+.lead{font-family:var(--serif);font-size:31px;line-height:1.42;color:#2f3431}
+.profile-content>p:not(.lead){color:var(--muted);font-size:17px}
+.profile-block{margin-top:50px;padding-top:28px;border-top:1px solid var(--line)}
+.profile-block h3{font-size:12px;text-transform:uppercase;letter-spacing:.13em;margin-bottom:24px}
+.clean-list{list-style:none;padding:0;margin:0}
+.clean-list li{padding:13px 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:20px}
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tags span{border:1px solid var(--line);padding:8px 12px;font-size:12px}
+
+.section-muted{background:var(--paper-2)}
+.teaching-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #c7c0b2;border-left:1px solid #c7c0b2}
+.teaching-item{padding:28px;min-height:170px;border-right:1px solid #c7c0b2;border-bottom:1px solid #c7c0b2}
+.teaching-item span{font-size:10px;letter-spacing:.12em;color:var(--accent)}
+.teaching-item h3{font-family:var(--serif);font-size:24px;font-weight:400;margin-top:28px}
+
+.notes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.note-card{border-top:1px solid var(--ink);padding-top:22px}
+.note-type{text-transform:uppercase;font-size:10px;letter-spacing:.13em;color:var(--accent)}
+.note-card h3{font-family:var(--serif);font-size:27px;font-weight:400;line-height:1.2;margin:24px 0 14px}
+.note-card p:last-child{color:var(--muted)}
+
+.contact-section{background:var(--deep-2);color:var(--white);padding:90px 0}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px}
+.contact-grid h2{font-family:var(--serif);font-weight:400;font-size:50px;line-height:1.05}
+.contact-data{padding-top:35px}
+.contact-data>p:first-child{color:#c3cac5;max-width:500px}
+.email-link{display:inline-block;font-family:var(--serif);font-size:clamp(25px,4vw,42px);border-bottom:1px solid #7f8882;padding-bottom:4px;margin:20px 0}
+.location{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#aeb5b0;margin-top:24px}
+
+.site-footer{background:#151a17;color:#b7bdb9;padding:28px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;font-size:12px}
+.footer-inner p{margin:0}
+
+@media (max-width: 900px){
+  .container{width:min(var(--max),calc(100% - 32px))}
+  .menu-toggle{display:block}
+  .main-nav{
+    position:absolute;left:16px;right:16px;top:68px;background:var(--paper);border:1px solid var(--line);
+    padding:16px;display:none;flex-direction:column;align-items:flex-start;gap:14px
+  }
+  .main-nav.open{display:flex}
+  .brand-name{display:none}
+  .hero{padding-top:64px}
+  .hero-grid,.profile-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-visual{min-height:360px;border-left:0;border-top:1px solid var(--line);padding:45px 0 0;align-items:center}
+  .monogram{max-width:280px}
+  .concept-axis{width:100%}
+  .research-grid{grid-template-columns:1fr}
+  .publication{grid-template-columns:1fr 28px}
+  .publication-type{grid-column:1/-1}
+  .sticky-heading{position:static}
+  .teaching-grid{grid-template-columns:repeat(2,1fr)}
+  .notes-grid{grid-template-columns:1fr}
+}
+
+@media (max-width: 600px){
+  .nav-wrap{height:66px}
+  .hero{padding:48px 0 58px}
+  h1{font-size:clamp(48px,16vw,68px)}
+  .hero-line{font-size:18px}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .section{padding:76px 0}
+  .statement-inner{padding:42px 0}
+  .research-card{min-height:auto}
+  .publication h3{font-size:29px}
+  .teaching-grid{grid-template-columns:1fr}
+  .contact-section{padding:70px 0}
+  .footer-inner{flex-direction:column}
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important}
+}
+
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Juan Pablo Quiero Zárate",
+    "honorificPrefix": "Dr.",
+    "jobTitle": "Académico e investigador",
+    "email": "mailto:juan.quiero@usach.cl",
+    "knowsAbout": [
+      "Liderazgo político",
+      "Economía y sostenibilidad",
+      "Innovación",
+      "Organizaciones",
+      "Ética",
+      "Sociedad"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="inicio">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Inicio">
+        <span class="brand-mark">JPQ</span>
+        <span class="brand-name">Juan Pablo Quiero Zárate</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menú</button>
+      <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+        <a href="#investigacion">Investigación</a>
+        <a href="#publicaciones">Publicaciones</a>
+        <a href="#perfil">Perfil</a>
+        <a href="#docencia">Docencia</a>
+        <a href="#reflexiones">Reflexiones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Académico · Investigador · Autor</p>
+          <h1>Dr. Juan Pablo<br>Quiero Zárate</h1>
+          <p class="hero-line">Liderazgo político · Economía y sostenibilidad · Innovación · Organizaciones · Ética y sociedad</p>
+          <p class="hero-intro">
+            Mi trabajo académico se concentra en el estudio del liderazgo, las organizaciones, la economía y los problemas éticos y políticos de la sociedad contemporánea. Desde una perspectiva interdisciplinaria, busco desarrollar marcos conceptuales que permitan comprender estos fenómenos más allá de sus manifestaciones inmediatas y contribuir a una reflexión crítica sobre sus transformaciones.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#investigacion">Ver líneas de investigación</a>
+            <a class="button secondary" href="#publicaciones">Explorar publicaciones</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Monograma Juan Pablo Quiero">
+          <div class="monogram">
+            <span>JPQ</span>
+          </div>
+          <div class="concept-axis">
+            <span>pensar</span>
+            <i></i>
+            <span>comprender</span>
+            <i></i>
+            <span>transformar</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement">
+      <div class="container statement-inner">
+        <p>Investigar los fenómenos sociales exige comprender las estructuras que los hacen posibles y las decisiones mediante las cuales pueden transformarse.</p>
+      </div>
+    </section>
+
+    <section class="section" id="investigacion">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">01 · Investigación</p>
+          <h2>Líneas de trabajo</h2>
+          <p>Problemas que articulan investigación teórica, análisis social y desarrollo conceptual.</p>
+        </div>
+
+        <div class="research-grid">
+          <article class="research-card">
+            <span class="card-number">01</span>
+            <h3>Liderazgo y poder</h3>
+            <p>Desarrollo de una teoría general del liderazgo centrada en la relación entre influencia, poder, seguidores y dirección.</p>
+          </article>
+          <article class="research-card">
+            <span class="card-number">02</span>
+            <h3>Economía y sostenibilidad</h3>
+            <p>Estudio de los fundamentos de la economía, el bienestar, los límites biofísicos y las bases de una economía ecológica.</p>
+          </article>
+          <article class="research-card">
+            <span class="card-number">03</span>
+            <h3>Innovación y organizaciones</h3>
+            <p>Análisis de la innovación desde la teoría de sistemas sociales, con énfasis en su comprensión como decisión y comunicación organizacional.</p>
+          </article>
+          <article class="research-card">
+            <span class="card-number">04</span>
+            <h3>Ética, libertad y sociedad</h3>
+            <p>Reflexión filosófica sobre libertad, moral, propiedad, vida social y condiciones institucionales para la existencia de alternativas reales.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="publicaciones">
+      <div class="container">
+        <div class="section-heading light">
+          <p class="eyebrow">02 · Publicaciones</p>
+          <h2>Libros y trabajos en desarrollo</h2>
+        </div>
+
+        <div class="publication-list">
+          <article class="publication">
+            <div class="publication-type">Libro en preparación</div>
+            <div>
+              <h3>Liderazgo político</h3>
+              <p class="subtitle">Ser, pensar, decir y hacer</p>
+              <p>Trabajo orientado a una comprensión general del liderazgo y su especificidad en el ámbito político.</p>
+            </div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </article>
+
+          <article class="publication">
+            <div class="publication-type">Libro en preparación</div>
+            <div>
+              <h3>Economía y sostenibilidad</h3>
+              <p class="subtitle">Bases para una economía ecológica</p>
+              <p>Una revisión crítica de la economía desde el oikos, el bienestar, los límites biofísicos y la sostenibilidad.</p>
+            </div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </article>
+
+          <article class="publication">
+            <div class="publication-type">Investigación</div>
+            <div>
+              <h3>Innovación como decisión</h3>
+              <p class="subtitle">Hacia una teoría general de la innovación desde el marco organizacional</p>
+              <p>Propuesta conceptual que aborda la innovación desde la decisión como forma de comunicación organizacional.</p>
+            </div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="perfil">
+      <div class="container profile-grid">
+        <div class="section-heading sticky-heading">
+          <p class="eyebrow">03 · Perfil</p>
+          <h2>Trayectoria académica</h2>
+        </div>
+
+        <div class="profile-content">
+          <p class="lead">
+            Académico chileno con formación interdisciplinaria en administración, análisis sistémico, filosofía política, ética y educación.
+          </p>
+          <p>
+            Su trabajo integra docencia universitaria, investigación y elaboración conceptual en torno al liderazgo, las organizaciones, la economía, la sostenibilidad, la innovación y los problemas éticos de la sociedad contemporánea.
+          </p>
+
+          <div class="profile-block">
+            <h3>Formación</h3>
+            <ul class="clean-list">
+              <li><span>Doctor en Educación</span></li>
+              <li><span>Magíster en Filosofía Política y Ética</span></li>
+              <li><span>Magíster en Análisis Sistémico Aplicado a la Sociedad</span></li>
+              <li><span>Ingeniero Comercial</span></li>
+              <li><span>Técnico Universitario en Administración de Personal</span></li>
+            </ul>
+          </div>
+
+          <div class="profile-block">
+            <h3>Áreas de trabajo</h3>
+            <div class="tags">
+              <span>Liderazgo</span>
+              <span>Organizaciones</span>
+              <span>Economía</span>
+              <span>Sostenibilidad</span>
+              <span>Innovación</span>
+              <span>Ética</span>
+              <span>Teoría de sistemas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="docencia">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">04 · Docencia</p>
+          <h2>Áreas de enseñanza</h2>
+          <p>Docencia universitaria orientada a integrar fundamentos conceptuales, análisis crítico y aplicación.</p>
+        </div>
+
+        <div class="teaching-grid">
+          <div class="teaching-item"><span>01</span><h3>Liderazgo político y ciudadano</h3></div>
+          <div class="teaching-item"><span>02</span><h3>Administración y organizaciones</h3></div>
+          <div class="teaching-item"><span>03</span><h3>Economía</h3></div>
+          <div class="teaching-item"><span>04</span><h3>Sostenibilidad</h3></div>
+          <div class="teaching-item"><span>05</span><h3>Innovación y emprendimiento</h3></div>
+          <div class="teaching-item"><span>06</span><h3>Negociación y mediación</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reflexiones">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">05 · Reflexiones</p>
+          <h2>Notas y ensayos breves</h2>
+          <p>Un espacio para desarrollar ideas que conectan investigación académica y discusión pública.</p>
+        </div>
+
+        <div class="notes-grid">
+          <article class="note-card">
+            <p class="note-type">Libertad</p>
+            <h3>Libertad, decisión y vida social</h3>
+            <p>Una aproximación a la libertad como posibilidad real de decidir dentro de condiciones sociales e institucionales concretas.</p>
+          </article>
+          <article class="note-card">
+            <p class="note-type">Economía</p>
+            <h3>Volver al oikos</h3>
+            <p>La economía entendida nuevamente como administración del hogar, subordinando crecimiento y acumulación al bienestar y la vida común.</p>
+          </article>
+          <article class="note-card">
+            <p class="note-type">Innovación</p>
+            <h3>¿Qué significa innovar?</h3>
+            <p>Una lectura organizacional que desplaza la innovación desde el resultado observable hacia la decisión que abre nuevas expectativas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">06 · Contacto</p>
+          <h2>Contacto académico</h2>
+        </div>
+        <div class="contact-data">
+          <p>Para consultas académicas, colaboración, docencia o publicaciones.</p>
+          <a class="email-link" href="mailto:juan.quiero@usach.cl">juan.quiero@usach.cl</a>
+          <p class="location">Santiago de Chile</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Juan Pablo Quiero Zárate</p>
+      <a href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script>
+const menuButton = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.main-nav');
+
+if (menuButton && nav) {
+  menuButton.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', String(open));
+  });
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+const year = document.querySelector('#year');
+if (year) year.textContent = new Date().getFullYear();
+
+  </script>
+</body>
+</html>
